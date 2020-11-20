@@ -1,0 +1,8 @@
+C:\Users\one-s\Desktop\ProjectGroup3\obj\Debug\ProjectGroup3.Properties.Resources.resources
+C:\Users\one-s\Desktop\ProjectGroup3\obj\Debug\ProjectGroup3.csproj.GenerateResource.cache
+C:\Users\one-s\Desktop\ProjectGroup3\obj\Debug\ProjectGroup3.csproj.CoreCompileInputs.cache
+C:\Users\one-s\Desktop\ProjectGroup3\bin\Debug\ProjectGroup3.exe.config
+C:\Users\one-s\Desktop\ProjectGroup3\bin\Debug\ProjectGroup3.exe
+C:\Users\one-s\Desktop\ProjectGroup3\bin\Debug\ProjectGroup3.pdb
+C:\Users\one-s\Desktop\ProjectGroup3\obj\Debug\ProjectGroup3.exe
+C:\Users\one-s\Desktop\ProjectGroup3\obj\Debug\ProjectGroup3.pdb
