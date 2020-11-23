@@ -1,0 +1,11 @@
+C:\Users\Deebo\source\repos\GroupProjectIdea\GroupProjectIdea\bin\Debug\GroupProjectIdea.exe.config
+C:\Users\Deebo\source\repos\GroupProjectIdea\GroupProjectIdea\bin\Debug\GroupProjectIdea.exe
+C:\Users\Deebo\source\repos\GroupProjectIdea\GroupProjectIdea\bin\Debug\GroupProjectIdea.pdb
+C:\Users\Deebo\source\repos\GroupProjectIdea\GroupProjectIdea\obj\Debug\GroupProjectIdea.csprojAssemblyReference.cache
+C:\Users\Deebo\source\repos\GroupProjectIdea\GroupProjectIdea\obj\Debug\GroupProjectIdea.Properties.Resources.resources
+C:\Users\Deebo\source\repos\GroupProjectIdea\GroupProjectIdea\obj\Debug\GroupProjectIdea.csproj.GenerateResource.cache
+C:\Users\Deebo\source\repos\GroupProjectIdea\GroupProjectIdea\obj\Debug\GroupProjectIdea.csproj.CoreCompileInputs.cache
+C:\Users\Deebo\source\repos\GroupProjectIdea\GroupProjectIdea\obj\Debug\GroupProjectIdea.exe
+C:\Users\Deebo\source\repos\GroupProjectIdea\GroupProjectIdea\obj\Debug\GroupProjectIdea.pdb
+C:\Users\Deebo\source\repos\GroupProjectIdea\GroupProjectIdea\obj\Debug\GroupProjectIdea.Form1.resources
+C:\Users\Deebo\source\repos\GroupProjectIdea\GroupProjectIdea\obj\Debug\GroupProjectIdea.EditProject.resources
