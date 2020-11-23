@@ -6,3 +6,13 @@ C:\Users\one-s\Desktop\ProjectGroup3\bin\Debug\ProjectGroup3.exe
 C:\Users\one-s\Desktop\ProjectGroup3\bin\Debug\ProjectGroup3.pdb
 C:\Users\one-s\Desktop\ProjectGroup3\obj\Debug\ProjectGroup3.exe
 C:\Users\one-s\Desktop\ProjectGroup3\obj\Debug\ProjectGroup3.pdb
+K:\GroupProject\ProjectGroup3\bin\Debug\ProjectGroup3.exe.config
+K:\GroupProject\ProjectGroup3\bin\Debug\ProjectGroup3.exe
+K:\GroupProject\ProjectGroup3\bin\Debug\ProjectGroup3.pdb
+K:\GroupProject\ProjectGroup3\obj\Debug\ProjectGroup3.csprojAssemblyReference.cache
+K:\GroupProject\ProjectGroup3\obj\Debug\ProjectGroup3.Form1.resources
+K:\GroupProject\ProjectGroup3\obj\Debug\ProjectGroup3.Properties.Resources.resources
+K:\GroupProject\ProjectGroup3\obj\Debug\ProjectGroup3.csproj.GenerateResource.cache
+K:\GroupProject\ProjectGroup3\obj\Debug\ProjectGroup3.csproj.CoreCompileInputs.cache
+K:\GroupProject\ProjectGroup3\obj\Debug\ProjectGroup3.exe
+K:\GroupProject\ProjectGroup3\obj\Debug\ProjectGroup3.pdb
