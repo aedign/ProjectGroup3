@@ -6,3 +6,4 @@ C:\Users\one-s\Desktop\ProjectGroup3\bin\Debug\ProjectGroup3.exe
 C:\Users\one-s\Desktop\ProjectGroup3\bin\Debug\ProjectGroup3.pdb
 C:\Users\one-s\Desktop\ProjectGroup3\obj\Debug\ProjectGroup3.exe
 C:\Users\one-s\Desktop\ProjectGroup3\obj\Debug\ProjectGroup3.pdb
+C:\Users\one-s\Desktop\ProjectGroup3\obj\Debug\ProjectGroup3.csprojAssemblyReference.cache

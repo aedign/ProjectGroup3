@@ -1,7 +1,10 @@
-﻿public enum RiskProbability
+﻿namespace Classes
 {
-    low,
-    mediumLow,
-    mediumHigh,
-    High,
+    public enum RiskProbability
+    {
+        low,
+        mediumLow,
+        mediumHigh,
+        High,
+    }
 }

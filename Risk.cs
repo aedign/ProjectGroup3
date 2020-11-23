@@ -1,33 +1,36 @@
 ﻿using System.Collections.Generic;
 
-public class Risk
+namespace Classes
 {
-    private string description;
-    private RiskProbability probability;
-
-    public Risk(string description, RiskProbability probability)
+    public class Risk
     {
-        this.description = description;
-        this.probability = probability;
-    }
+        private string description;
+        private RiskProbability probability;
 
-    public string getDescription()
-    {
-        return this.description;
-    }
+        public Risk(string description, RiskProbability probability)
+        {
+            this.description = description;
+            this.probability = probability;
+        }
 
-    public string getProbability()
-    {
-        return this.probability.ToString();
-    }
+        public string getDescription()
+        {
+            return this.description;
+        }
 
-    public void setDescription(string newDescription)
-    {
-        this.description = newDescription;
-    }
+        public string getProbability()
+        {
+            return this.probability.ToString();
+        }
 
-    public void setProbability(RiskProbability newProbability)
-    {
-        this.probability = newProbability;
+        public void setDescription(string newDescription)
+        {
+            this.description = newDescription;
+        }
+
+        public void setProbability(RiskProbability newProbability)
+        {
+            this.probability = newProbability;
+        }
     }
 }

@@ -1,83 +1,87 @@
 ﻿using System.Collections.Generic;
 
-public class Project
+namespace Classes
 {
-    private string name;
-    private string description;
-    private List<string> members;
-    private List<string> functionalRequirements;
-    private List<string> nonFunctionalRequirements;
-    private List<Risk> risks;
 
-    public Project(string name, string description)
+    public class Project
     {
-        this.name = name;
-        this.description = description;
-        this.members = new List<string>();
-    }
+        private string name;
+        private string description;
+        private List<string> members;
+        private List<string> functionalRequirements;
+        private List<string> nonFunctionalRequirements;
+        private List<Risk> risks;
 
-    public string getName()
-    {
-        return this.name;
-    }
+        public Project(string name, string description)
+        {
+            this.name = name;
+            this.description = description;
+            this.members = new List<string>();
+        }
 
-    public string getDescription()
-    {
-        return this.description;
-    }
+        public string getName()
+        {
+            return this.name;
+        }
 
-    public List<string> getMembers()
-    {
-        return this.members;
-    }
+        public string getDescription()
+        {
+            return this.description;
+        }
 
-    public List<string> getFunctionalRequirements()
-    {
-        return this.functionalRequirements;
-    }
+        public List<string> getMembers()
+        {
+            return this.members;
+        }
 
-    public List<string> getNonFunctionalRequirements()
-    {
-        return this.nonFunctionalRequirements;
-    }
+        public List<string> getFunctionalRequirements()
+        {
+            return this.functionalRequirements;
+        }
 
-    public List<Risk> getRisks()
-    {
-        return this.risks;
-    }
+        public List<string> getNonFunctionalRequirements()
+        {
+            return this.nonFunctionalRequirements;
+        }
 
-    public void setName(string newName)
-    {
-        this.name = newName;
-    }
+        public List<Risk> getRisks()
+        {
+            return this.risks;
+        }
 
-    public void setDescription(string newDescription)
-    {
-        this.description = newDescription;
-    }
+        public void setName(string newName)
+        {
+            this.name = newName;
+        }
 
-    public void addMember(string name)
-    {
-        this.members.Add(name);
-    }
+        public void setDescription(string newDescription)
+        {
+            this.description = newDescription;
+        }
 
-    public void addFunctionalRequirement(string funcReq)
-    {
-        this.functionalRequirements.Add(funcReq);
-    }
+        public void addMember(string name)
+        {
+            this.members.Add(name);
+        }
 
-    public void addNonFunctionalRequirement(string nonFuncReq)
-    {
-        this.functionalRequirements.Add(nonFuncReq);
-    }
+        public void addFunctionalRequirement(string funcReq)
+        {
+            this.functionalRequirements.Add(funcReq);
+        }
 
-    public void addRisk(Risk risk)
-    {
-        this.risks.Add(risk);
-    }
+        public void addNonFunctionalRequirement(string nonFuncReq)
+        {
+            this.functionalRequirements.Add(nonFuncReq);
+        }
 
-    public void removeMember(string member)
-    {
-        this.members.Remove(member);
+        public void addRisk(Risk risk)
+        {
+            this.risks.Add(risk);
+        }
+
+        public void removeMember(string member)
+        {
+            this.members.Remove(member);
+        }
     }
 }
