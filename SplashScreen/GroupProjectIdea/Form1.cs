@@ -37,7 +37,15 @@ namespace GroupProjectIdea
             }
 
             listProjects.Items.Remove(selectedProject);
-            listProjects.Items.Add(selectedProject);
+            listProjects.Items.Add(selectedProject); //find new way for editing
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Project p = (Project)listProjects.SelectedItem;
+            
+            ProjectView view = new ProjectView(p);
+            view.ShowDialog();
         }
     }
 }

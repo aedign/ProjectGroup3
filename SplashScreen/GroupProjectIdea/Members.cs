@@ -6,20 +6,16 @@ using System.Threading.Tasks;
 
 namespace GroupProjectIdea
 {
-    public class Project
+    class Members
     {
         public string Name { get; set; }
-        
-        public Project(string name)
+        public Members(string name)
         {
             Name = name;
         }
-
         public override string ToString()
         {
             return Name;
         }
     }
-
-    
 }

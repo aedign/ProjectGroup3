@@ -9,3 +9,15 @@ C:\Users\Deebo\source\repos\GroupProjectIdea\GroupProjectIdea\obj\Debug\GroupPro
 C:\Users\Deebo\source\repos\GroupProjectIdea\GroupProjectIdea\obj\Debug\GroupProjectIdea.pdb
 C:\Users\Deebo\source\repos\GroupProjectIdea\GroupProjectIdea\obj\Debug\GroupProjectIdea.Form1.resources
 C:\Users\Deebo\source\repos\GroupProjectIdea\GroupProjectIdea\obj\Debug\GroupProjectIdea.EditProject.resources
+K:\GroupProject\ProjectGroup3\SplashScreen\GroupProjectIdea\bin\Debug\GroupProjectIdea.exe.config
+K:\GroupProject\ProjectGroup3\SplashScreen\GroupProjectIdea\bin\Debug\GroupProjectIdea.exe
+K:\GroupProject\ProjectGroup3\SplashScreen\GroupProjectIdea\bin\Debug\GroupProjectIdea.pdb
+K:\GroupProject\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.csprojAssemblyReference.cache
+K:\GroupProject\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.EditProject.resources
+K:\GroupProject\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.Form1.resources
+K:\GroupProject\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.Properties.Resources.resources
+K:\GroupProject\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.csproj.GenerateResource.cache
+K:\GroupProject\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.csproj.CoreCompileInputs.cache
+K:\GroupProject\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.exe
+K:\GroupProject\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.pdb
+K:\GroupProject\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.ProjectView.resources
