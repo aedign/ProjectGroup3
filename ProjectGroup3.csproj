@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Member.cs" />
     <Compile Include="RiskProbability.cs" />
     <Compile Include="Risk.cs" />
     <Compile Include="Project.cs" />

@@ -5,83 +5,103 @@ namespace Classes
 
     public class Project
     {
-        private string name;
-        private string description;
-        private List<string> members;
-        private List<string> functionalRequirements;
-        private List<string> nonFunctionalRequirements;
-        private List<Risk> risks;
+        private string Name;
+        private string Description;
+        private List<Member> Members;
+        private List<string> FunctionalRequirements;
+        private List<string> NonFunctionalRequirements;
+        private List<Risk> Risks;
 
-        public Project(string name, string description)
+        public Project(string Name, string Description)
         {
-            this.name = name;
-            this.description = description;
-            this.members = new List<string>();
+            this.Name = Name;
+            this.Description = Description;
+            this.Members = new List<Member>();
+            this.FunctionalRequirements = new List<string>();
+            this.NonFunctionalRequirements = new List<string>();
+            this.Risks = new List<Risk>();
         }
 
-        public string getName()
+        public string GetName()
         {
-            return this.name;
+            return this.Name;
         }
 
-        public string getDescription()
+        public string GetDescription()
         {
-            return this.description;
+            return this.Description;
         }
 
-        public List<string> getMembers()
+        public List<Member> GetMembers()
         {
-            return this.members;
+            return this.Members;
         }
 
-        public List<string> getFunctionalRequirements()
+        public List<string> GetFunctionalRequirements()
         {
-            return this.functionalRequirements;
+            return this.FunctionalRequirements;
         }
 
-        public List<string> getNonFunctionalRequirements()
+        public List<string> GetNonFunctionalRequirements()
         {
-            return this.nonFunctionalRequirements;
+            return this.NonFunctionalRequirements;
         }
 
-        public List<Risk> getRisks()
+        public List<Risk> GetRisks()
         {
-            return this.risks;
+            return this.Risks;
         }
 
-        public void setName(string newName)
+        public void SetName(string newName)
         {
-            this.name = newName;
+            this.Name = newName;
         }
 
-        public void setDescription(string newDescription)
+        public void SetDescription(string newDescription)
         {
-            this.description = newDescription;
+            this.Description = newDescription;
         }
 
-        public void addMember(string name)
+
+        public void AddMember(string Name)
         {
-            this.members.Add(name);
+            this.Members.Add(new Member(Name));
         }
 
-        public void addFunctionalRequirement(string funcReq)
+        public void AddFunctionalRequirement(string FuncReq)
         {
-            this.functionalRequirements.Add(funcReq);
+            this.FunctionalRequirements.Add(FuncReq);
         }
 
-        public void addNonFunctionalRequirement(string nonFuncReq)
+        public void AddNonFunctionalRequirement(string NonFuncReq)
         {
-            this.functionalRequirements.Add(nonFuncReq);
+            this.FunctionalRequirements.Add(NonFuncReq);
         }
 
-        public void addRisk(Risk risk)
+        public void AddRisk(Risk Risk)
         {
-            this.risks.Add(risk);
+            this.Risks.Add(Risk);
         }
 
-        public void removeMember(string member)
+        public void RemoveMember(string Member)
         {
-            this.members.Remove(member);
+            this.Members.Remove(new Member(Member));
         }
+
+        public void RemoveFunctionalRequirement(string FuncReq)
+        {
+            this.FunctionalRequirements.Remove(FuncReq);
+        }
+
+        public void RemoveNonFunctionalRequirement(string NonFuncReq)
+        {
+            this.NonFunctionalRequirements.Remove(NonFuncReq);
+        }
+
+        public void RemoveRisk(Risk Risk)
+        {
+            this.Risks.Remove(Risk);
+        }
+
     }
 }
