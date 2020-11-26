@@ -21,19 +21,24 @@ namespace GroupProjectIdea
         {
             InitializeComponent();
             this.p = project;
+            foreach (Member member in p.GetMembers()) {
+                listMembers.Items.Add(member);
+            }
+            
             labelProjectName.Text = p.Name;
         }
 
         private void buttonAddMembers_Click(object sender, EventArgs e)
         {
             string name = textBoxMembers.Text;
-            Members members = new Members(name);
-            listMembers.Items.Add(members);
+            Member member = new Member(name);
+            p.AddMember(member);
+            listMembers.Items.Add(member);
         }
 
         private void listMembers_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            Members selectedMembers = (Members)listMembers.SelectedItem;
+            Member selectedMembers = (Member)listMembers.SelectedItem;
             EditProject editProject = new EditProject();
             editProject.Name = selectedMembers.Name;
             DialogResult result = editProject.ShowDialog();

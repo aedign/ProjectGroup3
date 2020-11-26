@@ -20,13 +20,14 @@ namespace GroupProjectIdea
         private void button2_Click(object sender, EventArgs e)
         {
             string name = textProject.Text;
-            Project project = new Project(name);
+            Project project = new Project(name, "Description");
+            project.AddMember(new Member("Fucktard"));
             listProjects.Items.Add(project);
         }
 
         private void listProjects_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            Project selectedProject = (Project)listProjects.SelectedItem;
+            Project selectedProject = (Project) listProjects.SelectedItem;
             EditProject editProject = new EditProject();
             editProject.Name = selectedProject.Name;
             DialogResult result = editProject.ShowDialog();
@@ -36,16 +37,21 @@ namespace GroupProjectIdea
                 selectedProject.Name = editProject.Name;
             }
 
-            listProjects.Items.Remove(selectedProject);
+            listProjects.Refresh();
             listProjects.Items.Add(selectedProject); //find new way for editing
+            listProjects.Items.Remove(selectedProject);
+        
+          
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Project p = (Project)listProjects.SelectedItem;
-            
-            ProjectView view = new ProjectView(p);
-            view.ShowDialog();
+            if (p != null){
+                 ProjectView view = new ProjectView(p);
+                view.ShowDialog();
+            }
+           
         }
     }
 }

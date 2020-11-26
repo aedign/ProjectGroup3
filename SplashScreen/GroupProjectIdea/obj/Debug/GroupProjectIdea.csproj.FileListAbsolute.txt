@@ -21,3 +21,14 @@ K:\GroupProject\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProje
 K:\GroupProject\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.exe
 K:\GroupProject\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.pdb
 K:\GroupProject\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.ProjectView.resources
+C:\Users\one-s\Desktop\Project\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.EditProject.resources
+C:\Users\one-s\Desktop\Project\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.Form1.resources
+C:\Users\one-s\Desktop\Project\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.ProjectView.resources
+C:\Users\one-s\Desktop\Project\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.Properties.Resources.resources
+C:\Users\one-s\Desktop\Project\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.csproj.GenerateResource.cache
+C:\Users\one-s\Desktop\Project\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.csproj.CoreCompileInputs.cache
+C:\Users\one-s\Desktop\Project\ProjectGroup3\SplashScreen\GroupProjectIdea\bin\Debug\GroupProjectIdea.exe.config
+C:\Users\one-s\Desktop\Project\ProjectGroup3\SplashScreen\GroupProjectIdea\bin\Debug\GroupProjectIdea.exe
+C:\Users\one-s\Desktop\Project\ProjectGroup3\SplashScreen\GroupProjectIdea\bin\Debug\GroupProjectIdea.pdb
+C:\Users\one-s\Desktop\Project\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.exe
+C:\Users\one-s\Desktop\Project\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.pdb
