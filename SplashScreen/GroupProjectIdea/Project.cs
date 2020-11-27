@@ -13,7 +13,7 @@ namespace GroupProjectIdea
         private List<Member> Members;
         private List<string> FunctionalRequirements;
         private List<string> NonFunctionalRequirements;
-        private List<Risk> Risks;
+        private List<FormRisk> Risks;
 
         public Project(string Name, string Description)
         {
@@ -22,7 +22,7 @@ namespace GroupProjectIdea
             this.Members = new List<Member>();
             this.FunctionalRequirements = new List<string>();
             this.NonFunctionalRequirements = new List<string>();
-            this.Risks = new List<Risk>();
+            this.Risks = new List<FormRisk>();
         }
 
         public override string ToString()
@@ -55,7 +55,7 @@ namespace GroupProjectIdea
             return this.NonFunctionalRequirements;
         }
 
-        public List<Risk> GetRisks()
+        public List<FormRisk> GetRisks()
         {
            return this.Risks;
         }
@@ -86,7 +86,7 @@ namespace GroupProjectIdea
             this.FunctionalRequirements.Add(NonFuncReq);
         }
 
-        public void AddRisk(Risk Risk)
+        public void AddRisk(FormRisk Risk)
         {
             this.Risks.Add(Risk);
         }
@@ -106,7 +106,7 @@ namespace GroupProjectIdea
             this.NonFunctionalRequirements.Remove(NonFuncReq);
         }
 
-        public void RemoveRisk(Risk Risk)
+        public void RemoveRisk(FormRisk Risk)
         {
             this.Risks.Remove(Risk);
         }

@@ -58,5 +58,12 @@ namespace GroupProjectIdea
             listMembers.Items.Remove(selectedMembers);
             listMembers.Items.Add(selectedMembers);
         }
+
+        private void listBoxRisk_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            /*Risk selectedRisk = (Risk)listBoxRisk.SelectedItem;
+            FormRisk editRisk = new FormRisk(this.p.GetRisks());
+            editRisk*/
+        }
     }
 }

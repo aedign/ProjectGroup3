@@ -44,3 +44,4 @@ C:\Users\one-s\Desktop\TheProject\ProjectGroup3\SplashScreen\GroupProjectIdea\ob
 C:\Users\one-s\Desktop\TheProject\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.exe
 C:\Users\one-s\Desktop\TheProject\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.pdb
 C:\Users\one-s\Desktop\TheProject\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.csprojAssemblyReference.cache
+K:\GroupProject\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.FormRisk.resources

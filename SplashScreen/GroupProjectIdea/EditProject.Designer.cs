@@ -30,6 +30,7 @@
         {
             this.textName = new System.Windows.Forms.TextBox();
             this.Save = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textName
@@ -50,11 +51,21 @@
             this.Save.UseVisualStyleBackColor = true;
             this.Save.Click += new System.EventHandler(this.Save_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Edit Name";
+            // 
             // EditProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(448, 153);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.textName);
             this.Name = "EditProject";
@@ -69,5 +80,6 @@
 
         private System.Windows.Forms.TextBox textName;
         private System.Windows.Forms.Button Save;
+        private System.Windows.Forms.Label label1;
     }
 }

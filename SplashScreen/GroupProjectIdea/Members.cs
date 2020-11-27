@@ -21,37 +21,37 @@ namespace GroupProjectIdea
 
     public class Risk
     {
-        private string description;
-        private RiskProbability probability;
+        private string name;
+        private RiskStatus status;
 
-        public Risk(string description, RiskProbability probability)
+        public Risk(string description, RiskStatus status)
         {
-            this.description = description;
-            this.probability = probability;
+            this.name = description;
+            this.status = status;
         }
 
         public string getDescription()
         {
-            return this.description;
+            return this.name;
         }
 
-        public string getProbability()
+        public string getStatus()
         {
-            return this.probability.ToString();
+            return this.status.ToString();
         }
 
-        public void setDescription(string newDescription)
+        public void setName(string newName)
         {
-            this.description = newDescription;
+            this.name = newName;
         }
 
-        public void setProbability(RiskProbability newProbability)
+        public void setProbability(RiskStatus newProbability)
         {
-            this.probability = newProbability;
+            this.status = newProbability;
         }
     }
 
-    public enum RiskProbability
+    public enum RiskStatus
     {
         low,
         mediumLow,
