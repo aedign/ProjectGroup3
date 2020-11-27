@@ -10,25 +10,37 @@ using System.Windows.Forms;
 
 namespace GroupProjectIdea
 {
-    public partial class Form1 : Form
-    {
+    public partial class Form1 : Form 
+        {
+
+        public List<Project> Projects = new List<Project>();
+    
         public Form1()
         {
+            // Projects = GET DATA FROM FILE DATABASE
             InitializeComponent();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (textProject.Text.Equals("")){
+                return;
+            }
+            
             string name = textProject.Text;
             Project project = new Project(name, "Description");
-            project.AddMember(new Member("Fucktard"));
-            listProjects.Items.Add(project);
+            Project exists = this.Projects.Find(p => p.Name == project.Name);
+            if(exists == null){
+                this.Projects.Add(project);
+                listProjects.Items.Add(project);
+            }
+            
         }
 
         private void listProjects_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             Project selectedProject = (Project) listProjects.SelectedItem;
-            EditProject editProject = new EditProject();
+            EditProject editProject = new EditProject(this.Projects);
             editProject.Name = selectedProject.Name;
             DialogResult result = editProject.ShowDialog();
             
@@ -36,8 +48,6 @@ namespace GroupProjectIdea
             {
                 selectedProject.Name = editProject.Name;
             }
-
-            listProjects.Refresh();
             listProjects.Items.Add(selectedProject); //find new way for editing
             listProjects.Items.Remove(selectedProject);
         
@@ -48,7 +58,7 @@ namespace GroupProjectIdea
         {
             Project p = (Project)listProjects.SelectedItem;
             if (p != null){
-                 ProjectView view = new ProjectView(p);
+                ProjectView view = new ProjectView(p);
                 view.ShowDialog();
             }
            

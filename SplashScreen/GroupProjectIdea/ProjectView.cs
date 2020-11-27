@@ -30,16 +30,23 @@ namespace GroupProjectIdea
 
         private void buttonAddMembers_Click(object sender, EventArgs e)
         {
+            if (textBoxMembers.Text.Equals("")){
+                return;
+            }
             string name = textBoxMembers.Text;
             Member member = new Member(name);
-            p.AddMember(member);
-            listMembers.Items.Add(member);
+            Member exists = this.p.GetMembers().Find(m => m.Name == member.Name);
+              if(exists == null){
+                p.AddMember(member);
+                listMembers.Items.Add(member);
+              }
+            
         }
 
         private void listMembers_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             Member selectedMembers = (Member)listMembers.SelectedItem;
-            EditProject editProject = new EditProject();
+            EditProject editProject = new EditProject(this.p.GetMembers());
             editProject.Name = selectedMembers.Name;
             DialogResult result = editProject.ShowDialog();
 
