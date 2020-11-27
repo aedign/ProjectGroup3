@@ -13,20 +13,31 @@ namespace GroupProjectIdea
     public partial class ProjectView : Form
     {
         private Project p;
+
+        public ProjectView(Project project)
+        {
+            InitializeComponent();
+
+            this.p = project;
+            labelProjectName.Text = p.Name;
+
+            foreach (Member member in p.GetMembers())
+            {
+                listMembers.Items.Add(member);
+            }
+
+            foreach (string fr in p.GetFunctionalRequirements())
+            {
+                listFunctionalities.Items.Add(fr);
+            }
+
+        }
+
         private void labelProjectName_Click(object sender, EventArgs e)
         {
             labelProjectName.Text = p.Name;
         }
-        public ProjectView(Project project)
-        {
-            InitializeComponent();
-            this.p = project;
-            foreach (Member member in p.GetMembers()) {
-                listMembers.Items.Add(member);
-            }
-            
-            labelProjectName.Text = p.Name;
-        }
+     
 
         private void buttonAddMembers_Click(object sender, EventArgs e)
         {
@@ -40,7 +51,6 @@ namespace GroupProjectIdea
                 p.AddMember(member);
                 listMembers.Items.Add(member);
               }
-            
         }
 
         private void listMembers_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -64,6 +74,27 @@ namespace GroupProjectIdea
             /*Risk selectedRisk = (Risk)listBoxRisk.SelectedItem;
             FormRisk editRisk = new FormRisk(this.p.GetRisks());
             editRisk*/
+        }
+
+        private void buttonAddFunctionalities_Click(object sender, EventArgs e)
+        {
+            if (textBoxFunctionalities.Text.Equals(""))
+            {
+                return;
+            }
+            string FunctionalRequirement = textBoxFunctionalities.Text;
+
+            List<string> fr = this.p.GetFunctionalRequirements();
+            
+            if (!fr.Contains(FunctionalRequirement))
+            {
+                p.AddFunctionalRequirement(FunctionalRequirement);
+                listFunctionalities.Items.Add(FunctionalRequirement);
+            }
+        }
+        private void listFunctionalities_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }

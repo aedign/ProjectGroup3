@@ -24,7 +24,7 @@ namespace GroupProjectIdea
 
         public EditProject(List<Member> Members)
         {
-            this.Projects = Projects;
+            this.Members = Members;
             InitializeComponent();
         }
 

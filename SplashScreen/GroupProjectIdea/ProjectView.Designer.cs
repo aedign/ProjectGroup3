@@ -46,12 +46,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // labelProjectName
             // 
             this.labelProjectName.AutoSize = true;
-            this.labelProjectName.Location = new System.Drawing.Point(629, 6);
+            this.labelProjectName.Location = new System.Drawing.Point(628, 9);
             this.labelProjectName.Name = "labelProjectName";
             this.labelProjectName.Size = new System.Drawing.Size(63, 13);
             this.labelProjectName.TabIndex = 0;
@@ -60,7 +65,7 @@
             // 
             // textBoxMembers
             // 
-            this.textBoxMembers.Location = new System.Drawing.Point(11, 35);
+            this.textBoxMembers.Location = new System.Drawing.Point(10, 199);
             this.textBoxMembers.Name = "textBoxMembers";
             this.textBoxMembers.Size = new System.Drawing.Size(289, 20);
             this.textBoxMembers.TabIndex = 1;
@@ -68,40 +73,41 @@
             // listMembers
             // 
             this.listMembers.FormattingEnabled = true;
-            this.listMembers.Location = new System.Drawing.Point(11, 76);
+            this.listMembers.Location = new System.Drawing.Point(10, 240);
             this.listMembers.Name = "listMembers";
-            this.listMembers.Size = new System.Drawing.Size(289, 511);
+            this.listMembers.Size = new System.Drawing.Size(289, 368);
             this.listMembers.TabIndex = 2;
             this.listMembers.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listMembers_MouseDoubleClick);
             // 
             // listFunctionalities
             // 
             this.listFunctionalities.FormattingEnabled = true;
-            this.listFunctionalities.Location = new System.Drawing.Point(348, 76);
+            this.listFunctionalities.Location = new System.Drawing.Point(347, 240);
             this.listFunctionalities.Name = "listFunctionalities";
-            this.listFunctionalities.Size = new System.Drawing.Size(289, 511);
+            this.listFunctionalities.Size = new System.Drawing.Size(289, 368);
             this.listFunctionalities.TabIndex = 3;
+            this.listFunctionalities.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listFunctionalities_MouseDoubleClick);
             // 
             // listBox3
             // 
             this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(684, 76);
+            this.listBox3.Location = new System.Drawing.Point(683, 240);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(289, 511);
+            this.listBox3.Size = new System.Drawing.Size(289, 368);
             this.listBox3.TabIndex = 3;
             // 
             // listBoxRisk
             // 
             this.listBoxRisk.FormattingEnabled = true;
-            this.listBoxRisk.Location = new System.Drawing.Point(1007, 89);
+            this.listBoxRisk.Location = new System.Drawing.Point(1006, 253);
             this.listBoxRisk.Name = "listBoxRisk";
-            this.listBoxRisk.Size = new System.Drawing.Size(289, 498);
+            this.listBoxRisk.Size = new System.Drawing.Size(289, 355);
             this.listBoxRisk.TabIndex = 3;
             this.listBoxRisk.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listBoxRisk_MouseDoubleClick);
             // 
             // buttonAddMembers
             // 
-            this.buttonAddMembers.Location = new System.Drawing.Point(11, 593);
+            this.buttonAddMembers.Location = new System.Drawing.Point(10, 614);
             this.buttonAddMembers.Name = "buttonAddMembers";
             this.buttonAddMembers.Size = new System.Drawing.Size(289, 23);
             this.buttonAddMembers.TabIndex = 4;
@@ -111,7 +117,7 @@
             // 
             // buttonAdd4
             // 
-            this.buttonAdd4.Location = new System.Drawing.Point(1007, 593);
+            this.buttonAdd4.Location = new System.Drawing.Point(1006, 614);
             this.buttonAdd4.Name = "buttonAdd4";
             this.buttonAdd4.Size = new System.Drawing.Size(289, 23);
             this.buttonAdd4.TabIndex = 5;
@@ -120,16 +126,17 @@
             // 
             // buttonAddFunctionalities
             // 
-            this.buttonAddFunctionalities.Location = new System.Drawing.Point(348, 593);
+            this.buttonAddFunctionalities.Location = new System.Drawing.Point(347, 614);
             this.buttonAddFunctionalities.Name = "buttonAddFunctionalities";
             this.buttonAddFunctionalities.Size = new System.Drawing.Size(289, 23);
             this.buttonAddFunctionalities.TabIndex = 5;
             this.buttonAddFunctionalities.Text = "Add";
             this.buttonAddFunctionalities.UseVisualStyleBackColor = true;
+            this.buttonAddFunctionalities.Click += new System.EventHandler(this.buttonAddFunctionalities_Click);
             // 
             // buttonAdd3
             // 
-            this.buttonAdd3.Location = new System.Drawing.Point(684, 593);
+            this.buttonAdd3.Location = new System.Drawing.Point(683, 614);
             this.buttonAdd3.Name = "buttonAdd3";
             this.buttonAdd3.Size = new System.Drawing.Size(289, 23);
             this.buttonAdd3.TabIndex = 6;
@@ -138,21 +145,21 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(684, 35);
+            this.textBox3.Location = new System.Drawing.Point(683, 199);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(289, 20);
             this.textBox3.TabIndex = 7;
             // 
             // textBoxFunctionalities
             // 
-            this.textBoxFunctionalities.Location = new System.Drawing.Point(348, 35);
+            this.textBoxFunctionalities.Location = new System.Drawing.Point(347, 199);
             this.textBoxFunctionalities.Name = "textBoxFunctionalities";
             this.textBoxFunctionalities.Size = new System.Drawing.Size(289, 20);
             this.textBoxFunctionalities.TabIndex = 7;
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(1007, 35);
+            this.textBox4.Location = new System.Drawing.Point(1006, 199);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(289, 20);
             this.textBox4.TabIndex = 8;
@@ -160,7 +167,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 19);
+            this.label1.Location = new System.Drawing.Point(7, 183);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 13);
             this.label1.TabIndex = 9;
@@ -169,7 +176,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(345, 19);
+            this.label2.Location = new System.Drawing.Point(344, 183);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(177, 13);
             this.label2.TabIndex = 9;
@@ -178,7 +185,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(681, 19);
+            this.label3.Location = new System.Drawing.Point(680, 183);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(198, 13);
             this.label3.TabIndex = 9;
@@ -187,7 +194,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1004, 19);
+            this.label4.Location = new System.Drawing.Point(1003, 183);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 9;
@@ -202,16 +209,66 @@
             "Medium Low",
             "Medium High",
             "High"});
-            this.comboBox1.Location = new System.Drawing.Point(1007, 62);
+            this.comboBox1.Location = new System.Drawing.Point(1006, 226);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(289, 21);
             this.comboBox1.TabIndex = 10;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(28, 95);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Update Manager";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(25, 79);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 13);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Manager:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(83, 79);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(74, 13);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "(Set Manager)";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(338, 79);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(96, 13);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Project Description";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(347, 95);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(625, 41);
+            this.richTextBox1.TabIndex = 17;
+            this.richTextBox1.Text = "";
             // 
             // ProjectView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1317, 620);
+            this.ClientSize = new System.Drawing.Size(1317, 649);
+            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -257,5 +314,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
