@@ -14,7 +14,7 @@ namespace GroupProjectIdea
         private List<Member> Members;
         private List<string> FunctionalRequirements;
         private List<string> NonFunctionalRequirements;
-        private List<FormRisk> Risks;
+        private List<Risk> Risks;
 
         public string Name { get => name; set => name = value; }
         public string Manager { get => manager; set => manager = value; }
@@ -22,7 +22,7 @@ namespace GroupProjectIdea
         public List<Member> Members1 { get => Members; set => Members = value; }
         public List<string> FunctionalRequirements1 { get => FunctionalRequirements; set => FunctionalRequirements = value; }
         public List<string> NonFunctionalRequirements1 { get => NonFunctionalRequirements; set => NonFunctionalRequirements = value; }
-        public List<FormRisk> Risks1 { get => Risks; set => Risks = value; }
+        public List<Risk> Risks1 { get => Risks; set => Risks = value; }
 
         public Project(string Name)
         {
@@ -30,7 +30,7 @@ namespace GroupProjectIdea
             this.Members1 = new List<Member>();
             this.FunctionalRequirements1 = new List<string>();
             this.NonFunctionalRequirements1 = new List<string>();
-            this.Risks1 = new List<FormRisk>();
+            this.Risks1 = new List<Risk>();
         }
 
         public override string ToString()
@@ -63,7 +63,7 @@ namespace GroupProjectIdea
             return this.NonFunctionalRequirements1;
         }
 
-        public List<FormRisk> GetRisks()
+        public List<Risk> GetRisks()
         {
             return this.Risks1;
         }
@@ -91,10 +91,10 @@ namespace GroupProjectIdea
 
         public void AddNonFunctionalRequirement(string NonFuncReq)
         {
-            this.FunctionalRequirements1.Add(NonFuncReq);
+            this.NonFunctionalRequirements1.Add(NonFuncReq);
         }
 
-        public void AddRisk(FormRisk Risk)
+        public void AddRisk(Risk Risk)
         {
             this.Risks1.Add(Risk);
         }
@@ -114,7 +114,7 @@ namespace GroupProjectIdea
             this.NonFunctionalRequirements1.Remove(NonFuncReq);
         }
 
-        public void RemoveRisk(FormRisk Risk)
+        public void RemoveRisk(Risk Risk)
         {
             this.Risks1.Remove(Risk);
         }

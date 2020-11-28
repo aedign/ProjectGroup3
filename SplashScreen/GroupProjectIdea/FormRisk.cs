@@ -12,9 +12,24 @@ namespace GroupProjectIdea
 {
     public partial class FormRisk : Form
     {
-        public FormRisk()
+
+        public string Name { get; set; }
+        List<Risk> Risks;
+
+        public FormRisk(List<Risk> Risks)
         {
+            this.Risks = Risks;
             InitializeComponent();
+        }
+
+        private void FormRisk_Load(object sender, EventArgs e)
+        {
+            textBox1.Text = Name;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //comboBox1.Text
         }
     }
 }

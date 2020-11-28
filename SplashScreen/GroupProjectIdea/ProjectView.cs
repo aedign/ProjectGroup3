@@ -49,6 +49,11 @@ namespace GroupProjectIdea
                 listFunctionalities.Items.Add(fr);
             }
 
+            foreach (string nfr in p.GetNonFunctionalRequirements())
+            {
+                listBox3.Items.Add(nfr);
+            }
+
         }
 
         private void labelProjectName_Click(object sender, EventArgs e)
@@ -63,6 +68,7 @@ namespace GroupProjectIdea
             {
                 return;
             }
+
             string name = textBoxMembers.Text;
             Member member = new Member(name);
             Member exists = this.p.GetMembers().Find(m => m.Name == member.Name);
@@ -75,6 +81,12 @@ namespace GroupProjectIdea
 
         private void listMembers_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+
+            if (listMembers.SelectedItem == null)
+            {
+                return;
+            }
+
             Member selectedMembers = (Member)listMembers.SelectedItem;
             EditProject editProject = new EditProject(this.p.GetMembers());
             editProject.Name = selectedMembers.Name;
@@ -87,13 +99,6 @@ namespace GroupProjectIdea
 
             listMembers.Items.Remove(selectedMembers);
             listMembers.Items.Add(selectedMembers);
-        }
-
-        private void listBoxRisk_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            /*Risk selectedRisk = (Risk)listBoxRisk.SelectedItem;
-            FormRisk editRisk = new FormRisk(this.p.GetRisks());
-            editRisk*/
         }
 
         private void buttonAddFunctionalities_Click(object sender, EventArgs e)
@@ -114,6 +119,12 @@ namespace GroupProjectIdea
         }
         private void listFunctionalities_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+
+            if (listFunctionalities.SelectedItem == null)
+            {
+                return;
+            }
+
             string fr = (string)listFunctionalities.SelectedItem;
             EditProject editProject = new EditProject(this.p.GetFunctionalRequirements(), true);
             editProject.Name = fr;
@@ -159,6 +170,92 @@ namespace GroupProjectIdea
             string fr = (string)listFunctionalities.SelectedItem;
             listFunctionalities.Items.Remove(fr);
             p.RemoveFunctionalRequirement(fr);
+        }
+
+        //non-functional requirements VVV
+        private void listBox3_DoubleClick(object sender, EventArgs e)
+        {
+            if (listBox3.SelectedItem == null)
+            {
+                return;
+            }
+
+            string nfr = (string)listBox3.SelectedItem;
+            EditProject editProject = new EditProject(this.p.GetNonFunctionalRequirements(), false);
+            editProject.Name = nfr;
+            DialogResult result = editProject.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                listBox3.Items.Remove(nfr);
+                p.RemoveNonFunctionalRequirement(nfr);
+                nfr = editProject.Name;
+            }
+            listBox3.Items.Add(nfr);
+            p.AddNonFunctionalRequirement(nfr);
+        }
+
+        private void buttonAdd3_Click(object sender, EventArgs e)
+        {
+            if (textBox3.Text.Equals(""))
+            {
+                return;
+            }
+            string NonFunctionalRequirement = textBox3.Text;
+
+            List<string> nfr = this.p.GetNonFunctionalRequirements();
+
+            if (!nfr.Contains(NonFunctionalRequirement))
+            {
+                p.AddNonFunctionalRequirement(NonFunctionalRequirement);
+                listBox3.Items.Add(NonFunctionalRequirement);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string nfr = (string) listBox3.SelectedItem;
+            listBox3.Items.Remove(nfr);
+            p.RemoveNonFunctionalRequirement(nfr);
+        }
+
+        private void buttonAdd4_Click(object sender, EventArgs e)
+        {
+
+            if (textBox4.Text.Equals(""))
+            {
+                return;
+            }
+
+            string riskName = (string) textBox4.Text;
+            string riskStatus = (string)comboBox1.Text;
+            Risk newRisk = new Risk(riskName, riskStatus);
+
+            Risk exists = this.p.GetRisks().Find(r => r.GetName() == newRisk.GetName());
+            if (exists == null)
+            {
+                p.AddRisk(newRisk);
+                listBoxRisk.Items.Add(newRisk.GetName() + "   - Status: " + newRisk.GetStatus());
+            }
+
+        }
+
+        private void listBoxRisk_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            string RiskString = (string) listBoxRisk.SelectedItem;
+            string name = "";
+            string status = "";
+            string[] array = RiskString.Split('-');
+
+            name = array[0].Trim();
+            status = RiskString.Substring(8);
+
+
+
+
+           // FormRisk editRisk = new FormRisk(this.p.GetRisks());
+           // editRisk.Name = selectedRisk.GetName();
+
         }
     }
 }

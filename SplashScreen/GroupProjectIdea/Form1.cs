@@ -12,14 +12,11 @@ namespace GroupProjectIdea
 {
     public partial class Form1 : Form 
         {
-
-        public List<Project> Projects = new List<Project>();
+        public List<Project> Projects;
         public Data data = new Data();
     
         public Form1()
         {
-            data.checkPath();
-            Projects = data.getDatabase();
             InitializeComponent();
         }
 
@@ -46,6 +43,7 @@ namespace GroupProjectIdea
             {
                 return;
             }
+
             Project selectedProject = (Project) listProjects.SelectedItem;
             EditProject editProject = new EditProject(this.Projects);
             editProject.Name = selectedProject.Name;
@@ -69,6 +67,38 @@ namespace GroupProjectIdea
                 view.ShowDialog();
             }
            
+        }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            data.setDatabase(Projects);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            data.checkPath();
+            Projects = data.getDatabase();
+            
+            foreach (Project p in Projects)
+            {
+                if (!p.Name.Equals("empty"))
+                {
+                    listProjects.Items.Add(p);
+                }
+                
+            }
+            
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Do You Want To Delete Your Project", "Remove Project", MessageBoxButtons.YesNoCancel);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Project toDelete = (Project)listProjects.SelectedItem;
+                Projects.Remove(toDelete);
+                listProjects.Items.Remove(toDelete);
+            }
         }
     }
 }

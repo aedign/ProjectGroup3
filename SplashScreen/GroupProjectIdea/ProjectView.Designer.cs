@@ -99,6 +99,7 @@
             this.listBox3.Name = "listBox3";
             this.listBox3.Size = new System.Drawing.Size(289, 368);
             this.listBox3.TabIndex = 3;
+            this.listBox3.DoubleClick += new System.EventHandler(this.listBox3_DoubleClick);
             // 
             // listBoxRisk
             // 
@@ -127,6 +128,7 @@
             this.buttonAdd4.TabIndex = 5;
             this.buttonAdd4.Text = "Add";
             this.buttonAdd4.UseVisualStyleBackColor = true;
+            this.buttonAdd4.Click += new System.EventHandler(this.buttonAdd4_Click);
             // 
             // buttonAddFunctionalities
             // 
@@ -146,6 +148,7 @@
             this.buttonAdd3.TabIndex = 6;
             this.buttonAdd3.Text = "Add";
             this.buttonAdd3.UseVisualStyleBackColor = true;
+            this.buttonAdd3.Click += new System.EventHandler(this.buttonAdd3_Click);
             // 
             // textBox3
             // 
@@ -283,6 +286,7 @@
             this.button3.TabIndex = 18;
             this.button3.Text = "Remove";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -336,7 +340,7 @@
             this.Controls.Add(this.textBoxMembers);
             this.Controls.Add(this.labelProjectName);
             this.Name = "ProjectView";
-            this.Text = "ProjectView";
+            this.Text = "Project View";
             this.ResumeLayout(false);
             this.PerformLayout();
 

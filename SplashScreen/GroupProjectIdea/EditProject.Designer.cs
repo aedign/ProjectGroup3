@@ -69,7 +69,7 @@
             this.Controls.Add(this.Save);
             this.Controls.Add(this.textName);
             this.Name = "EditProject";
-            this.Text = "EditProject";
+            this.Text = "Edit Project";
             this.Load += new System.EventHandler(this.EditProject_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
