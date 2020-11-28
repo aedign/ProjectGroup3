@@ -222,6 +222,7 @@
             this.button1.TabIndex = 12;
             this.button1.Text = "Update Manager";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -245,7 +246,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(338, 79);
+            this.label7.Location = new System.Drawing.Point(344, 79);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(96, 13);
             this.label7.TabIndex = 15;
@@ -258,6 +259,7 @@
             this.richTextBox1.Size = new System.Drawing.Size(625, 41);
             this.richTextBox1.TabIndex = 17;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // ProjectView
             // 

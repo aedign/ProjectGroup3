@@ -15,6 +15,8 @@ namespace GroupProjectIdea
         public string Name { get; set; }
         public List<Project> Projects;
         public List<Member> Members;
+        public List<string> FunctionalRequirements;
+        public List<string> NonFunctionalRequirements;
 
         public EditProject(List<Project> Projects)
         {
@@ -25,6 +27,26 @@ namespace GroupProjectIdea
         public EditProject(List<Member> Members)
         {
             this.Members = Members;
+            InitializeComponent();
+        }
+
+        public EditProject(List<string> Requirements, bool IsFunctional)
+        {
+           if (IsFunctional == true)
+            {
+                this.FunctionalRequirements = Requirements;
+                InitializeComponent();
+                return;
+            } 
+           else
+            {
+                this.NonFunctionalRequirements = Requirements;
+                InitializeComponent();
+            }
+        }
+
+        public EditProject()
+        {
             InitializeComponent();
         }
 
@@ -52,6 +74,17 @@ namespace GroupProjectIdea
                     return;
                 }
             }
+            if (this.FunctionalRequirements != null)
+            {
+                string exists = this.FunctionalRequirements.Find(fr => fr == textName.Text);
+                if (exists == null)
+                {
+                    Name = textName.Text;
+                    return;
+                }
+            }
+
+            Name = textName.Text;
         }
     }
 }

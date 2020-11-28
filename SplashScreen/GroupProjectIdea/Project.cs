@@ -9,6 +9,7 @@ namespace GroupProjectIdea
     public class Project
     {
         public string Name;
+        public string Manager;
         private string Description;
         private List<Member> Members;
         private List<string> FunctionalRequirements;
