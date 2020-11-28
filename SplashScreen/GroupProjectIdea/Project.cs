@@ -8,22 +8,29 @@ namespace GroupProjectIdea
 {
     public class Project
     {
-        public string Name;
-        public string Manager;
+        private string name;
+        private string manager;
         private string Description;
         private List<Member> Members;
         private List<string> FunctionalRequirements;
         private List<string> NonFunctionalRequirements;
         private List<FormRisk> Risks;
 
-        public Project(string Name, string Description)
+        public string Name { get => name; set => name = value; }
+        public string Manager { get => manager; set => manager = value; }
+        public string Description1 { get => Description; set => Description = value; }
+        public List<Member> Members1 { get => Members; set => Members = value; }
+        public List<string> FunctionalRequirements1 { get => FunctionalRequirements; set => FunctionalRequirements = value; }
+        public List<string> NonFunctionalRequirements1 { get => NonFunctionalRequirements; set => NonFunctionalRequirements = value; }
+        public List<FormRisk> Risks1 { get => Risks; set => Risks = value; }
+
+        public Project(string Name)
         {
             this.Name = Name;
-            this.Description = Description;
-            this.Members = new List<Member>();
-            this.FunctionalRequirements = new List<string>();
-            this.NonFunctionalRequirements = new List<string>();
-            this.Risks = new List<FormRisk>();
+            this.Members1 = new List<Member>();
+            this.FunctionalRequirements1 = new List<string>();
+            this.NonFunctionalRequirements1 = new List<string>();
+            this.Risks1 = new List<FormRisk>();
         }
 
         public override string ToString()
@@ -38,27 +45,27 @@ namespace GroupProjectIdea
 
         public string GetDescription()
         {
-            return this.Description;
+            return this.Description1;
         }
 
         public List<Member> GetMembers()
         {
-            return this.Members;
+            return this.Members1;
         }
 
         public List<string> GetFunctionalRequirements()
         {
-            return this.FunctionalRequirements;
+            return this.FunctionalRequirements1;
         }
 
         public List<string> GetNonFunctionalRequirements()
         {
-            return this.NonFunctionalRequirements;
+            return this.NonFunctionalRequirements1;
         }
 
         public List<FormRisk> GetRisks()
         {
-           return this.Risks;
+            return this.Risks1;
         }
 
         public void SetName(string newName)
@@ -68,51 +75,51 @@ namespace GroupProjectIdea
 
         public void SetDescription(string newDescription)
         {
-            this.Description = newDescription;
+            this.Description1 = newDescription;
         }
 
 
         public void AddMember(Member Member)
         {
-            this.Members.Add(Member);
+            this.Members1.Add(Member);
         }
 
         public void AddFunctionalRequirement(string FuncReq)
         {
-            this.FunctionalRequirements.Add(FuncReq);
+            this.FunctionalRequirements1.Add(FuncReq);
         }
 
         public void AddNonFunctionalRequirement(string NonFuncReq)
         {
-            this.FunctionalRequirements.Add(NonFuncReq);
+            this.FunctionalRequirements1.Add(NonFuncReq);
         }
 
         public void AddRisk(FormRisk Risk)
         {
-            this.Risks.Add(Risk);
+            this.Risks1.Add(Risk);
         }
 
         public void RemoveMember(Member Member)
         {
-            this.Members.Remove(Member);
+            this.Members1.Remove(Member);
         }
 
         public void RemoveFunctionalRequirement(string FuncReq)
         {
-            this.FunctionalRequirements.Remove(FuncReq);
+            this.FunctionalRequirements1.Remove(FuncReq);
         }
 
         public void RemoveNonFunctionalRequirement(string NonFuncReq)
         {
-            this.NonFunctionalRequirements.Remove(NonFuncReq);
+            this.NonFunctionalRequirements1.Remove(NonFuncReq);
         }
 
         public void RemoveRisk(FormRisk Risk)
         {
-            this.Risks.Remove(Risk);
+            this.Risks1.Remove(Risk);
         }
 
     }
 
-    
+
 }

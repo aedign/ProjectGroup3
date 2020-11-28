@@ -20,7 +20,15 @@ namespace GroupProjectIdea
 
             this.p = project;
             labelProjectName.Text = p.Name;
-            richTextBox1.Text = p.GetDescription();
+            if(p.GetDescription() == null)
+            {
+                richTextBox1.Text = "";
+            }
+            else
+            {
+                richTextBox1.Text = p.GetDescription();
+            }
+            
             if (p.Manager == null || p.Manager.Equals(""))
             {
                 label6.Text = "(Set Manager)";

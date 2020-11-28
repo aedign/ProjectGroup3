@@ -14,10 +14,12 @@ namespace GroupProjectIdea
         {
 
         public List<Project> Projects = new List<Project>();
+        public Data data = new Data();
     
         public Form1()
         {
-            // Projects = GET DATA FROM FILE DATABASE
+            data.checkPath();
+            Projects = data.getDatabase();
             InitializeComponent();
         }
 
@@ -28,7 +30,7 @@ namespace GroupProjectIdea
             }
             
             string name = textProject.Text;
-            Project project = new Project(name, "Description");
+            Project project = new Project(name);
             Project exists = this.Projects.Find(p => p.Name == project.Name);
             if(exists == null){
                 this.Projects.Add(project);
@@ -39,6 +41,11 @@ namespace GroupProjectIdea
 
         private void listProjects_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+
+            if (listProjects.SelectedItem == null)
+            {
+                return;
+            }
             Project selectedProject = (Project) listProjects.SelectedItem;
             EditProject editProject = new EditProject(this.Projects);
             editProject.Name = selectedProject.Name;
