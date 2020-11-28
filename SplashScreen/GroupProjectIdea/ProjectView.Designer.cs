@@ -51,6 +51,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelProjectName
@@ -107,9 +111,9 @@
             // 
             // buttonAddMembers
             // 
-            this.buttonAddMembers.Location = new System.Drawing.Point(10, 614);
+            this.buttonAddMembers.Location = new System.Drawing.Point(12, 614);
             this.buttonAddMembers.Name = "buttonAddMembers";
-            this.buttonAddMembers.Size = new System.Drawing.Size(289, 23);
+            this.buttonAddMembers.Size = new System.Drawing.Size(132, 23);
             this.buttonAddMembers.TabIndex = 4;
             this.buttonAddMembers.Text = "Add";
             this.buttonAddMembers.UseVisualStyleBackColor = true;
@@ -119,7 +123,7 @@
             // 
             this.buttonAdd4.Location = new System.Drawing.Point(1006, 614);
             this.buttonAdd4.Name = "buttonAdd4";
-            this.buttonAdd4.Size = new System.Drawing.Size(289, 23);
+            this.buttonAdd4.Size = new System.Drawing.Size(132, 23);
             this.buttonAdd4.TabIndex = 5;
             this.buttonAdd4.Text = "Add";
             this.buttonAdd4.UseVisualStyleBackColor = true;
@@ -128,7 +132,7 @@
             // 
             this.buttonAddFunctionalities.Location = new System.Drawing.Point(347, 614);
             this.buttonAddFunctionalities.Name = "buttonAddFunctionalities";
-            this.buttonAddFunctionalities.Size = new System.Drawing.Size(289, 23);
+            this.buttonAddFunctionalities.Size = new System.Drawing.Size(132, 23);
             this.buttonAddFunctionalities.TabIndex = 5;
             this.buttonAddFunctionalities.Text = "Add";
             this.buttonAddFunctionalities.UseVisualStyleBackColor = true;
@@ -138,7 +142,7 @@
             // 
             this.buttonAdd3.Location = new System.Drawing.Point(683, 614);
             this.buttonAdd3.Name = "buttonAdd3";
-            this.buttonAdd3.Size = new System.Drawing.Size(289, 23);
+            this.buttonAdd3.Size = new System.Drawing.Size(132, 23);
             this.buttonAdd3.TabIndex = 6;
             this.buttonAdd3.Text = "Add";
             this.buttonAdd3.UseVisualStyleBackColor = true;
@@ -261,11 +265,53 @@
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(167, 614);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(132, 23);
+            this.button2.TabIndex = 18;
+            this.button2.Text = "Remove";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(840, 614);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(132, 23);
+            this.button3.TabIndex = 18;
+            this.button3.Text = "Remove";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(504, 614);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(132, 23);
+            this.button4.TabIndex = 18;
+            this.button4.Text = "Remove";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(1163, 614);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(132, 23);
+            this.button5.TabIndex = 18;
+            this.button5.Text = "Remove";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
             // ProjectView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1317, 649);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -321,5 +367,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }

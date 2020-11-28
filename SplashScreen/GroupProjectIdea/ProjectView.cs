@@ -138,5 +138,19 @@ namespace GroupProjectIdea
                 p.Manager = label6.Text;
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Member selectedMember = (Member)listMembers.SelectedItem;
+            listMembers.Items.Remove(selectedMember);
+            p.RemoveMember(selectedMember);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string fr = (string)listFunctionalities.SelectedItem;
+            listFunctionalities.Items.Remove(fr);
+            p.RemoveFunctionalRequirement(fr);
+        }
     }
 }

@@ -92,9 +92,9 @@ namespace GroupProjectIdea
             this.Risks.Add(Risk);
         }
 
-        public void RemoveMember(string Member)
+        public void RemoveMember(Member Member)
         {
-            this.Members.Remove(new Member(Member));
+            this.Members.Remove(Member);
         }
 
         public void RemoveFunctionalRequirement(string FuncReq)
