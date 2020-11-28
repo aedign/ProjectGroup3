@@ -14,6 +14,7 @@ namespace GroupProjectIdea
     {
 
         public string Name { get; set; }
+        public string Status { get; set; }
         List<Risk> Risks;
 
         public FormRisk(List<Risk> Risks)
@@ -25,11 +26,28 @@ namespace GroupProjectIdea
         private void FormRisk_Load(object sender, EventArgs e)
         {
             textBox1.Text = Name;
+            comboBox1.Text = Status;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //comboBox1.Text
+            if (textBox1.Text.Equals(""))
+            {
+                return;
+            }
+
+            Risk exists = this.Risks.Find(r => r.GetName() == textBox1.Text);
+            if (exists == null || exists.GetStatus().Equals(this.Status))
+            {
+                Name = textBox1.Text;
+                Status = (string) comboBox1.SelectedItem;
+                return;
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -54,6 +54,11 @@ namespace GroupProjectIdea
                 listBox3.Items.Add(nfr);
             }
 
+            foreach (Risk r in p.GetRisks())
+            {
+                listBoxRisk.Items.Add(r.GetName() + "   - Status: " + r.GetStatus());
+            }
+
         }
 
         private void labelProjectName_Click(object sender, EventArgs e)
@@ -231,7 +236,8 @@ namespace GroupProjectIdea
             string riskStatus = (string)comboBox1.Text;
             Risk newRisk = new Risk(riskName, riskStatus);
 
-            Risk exists = this.p.GetRisks().Find(r => r.GetName() == newRisk.GetName());
+            Risk exists = this.p.GetRisks().Find(r => r.GetName().Equals(newRisk.GetName()));
+
             if (exists == null)
             {
                 p.AddRisk(newRisk);
@@ -242,20 +248,48 @@ namespace GroupProjectIdea
 
         private void listBoxRisk_MouseDoubleClick(object sender, MouseEventArgs e)
         {
+            if (listBoxRisk.SelectedItem == null)
+            {
+                return;
+            }
             string RiskString = (string) listBoxRisk.SelectedItem;
             string name = "";
-            string status = "";
             string[] array = RiskString.Split('-');
-
             name = array[0].Trim();
-            status = RiskString.Substring(8);
 
+            Risk current = this.p.GetRisks().Find(r => r.GetName().Equals(name));
 
+            FormRisk editRisk = new FormRisk(this.p.GetRisks());
+            editRisk.Name = current.GetName();
+            editRisk.Status = current.GetStatus();
 
+            DialogResult result = editRisk.ShowDialog();
 
-           // FormRisk editRisk = new FormRisk(this.p.GetRisks());
-           // editRisk.Name = selectedRisk.GetName();
+            listBoxRisk.Items.Remove(current.GetName() + "   - Status: " + current.GetStatus());
 
+            if (result == DialogResult.OK)
+            {
+                current.SetName(editRisk.Name);
+                current.SetStatus(editRisk.Status);
+            }
+
+           
+            listBoxRisk.Items.Add(current.GetName() + "   - Status: " + current.GetStatus());
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            string RiskString = (string)listBoxRisk.SelectedItem;
+            string name = "";
+            string[] array = RiskString.Split('-');
+            name = array[0].Trim();
+
+            Risk current = this.p.GetRisks().Find(r => r.GetName().Equals(name));
+
+            listBoxRisk.Items.Remove(current.GetName() + "   - Status: " + current.GetStatus());
+            p.RemoveRisk(current);
+            
         }
     }
 }

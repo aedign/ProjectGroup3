@@ -60,7 +60,8 @@ namespace GroupProjectIdea
             if (textName.Text.Equals("")){
                 return;
             }
-            if(this.Projects != null){
+            if(this.Projects != null)
+            {
                 Project exists = this.Projects.Find(p => p.Name == textName.Text);
                 if(exists == null){
                      Name = textName.Text;
@@ -69,7 +70,8 @@ namespace GroupProjectIdea
             }
              if(this.Members != null){
                Member exists = this.Members.Find(m => m.Name == textName.Text);
-                if(exists == null){
+                if(exists == null)
+                {
                     Name = textName.Text;
                     return;
                 }

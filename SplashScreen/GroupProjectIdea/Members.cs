@@ -26,33 +26,36 @@ namespace GroupProjectIdea
 
         public Risk(string name, string status)
         {
-            this.name = name;
-            this.status = status;
+            this.Name = name;
+            this.Status = status;
         }
+
+        public string Status { get => status; set => status = value; }
+        public string Name { get => name; set => name = value; }
 
         public string GetName()
         {
-            return this.name;
+            return this.Name;
         }
 
         public string GetStatus()
         {
-            return this.status.ToString();
+            return this.Status;
         }
 
         public void SetName(string newName)
         {
-            this.name = newName;
+            this.Name = newName;
         }
 
         public void SetStatus(string Status)
         {
-            this.status = Status;
+            this.Status = Status;
         }
 
         public override string ToString()
         {
-            return name;
+            return Name;
         }
     }
 }
