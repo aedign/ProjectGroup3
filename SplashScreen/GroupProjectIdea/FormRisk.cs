@@ -54,7 +54,28 @@ namespace GroupProjectIdea
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (textBox1.Text.Equals(""))
+            {
+                label3.Text = "Can't be empty";
+                button1.Enabled = false;
+                return;
+            }
+            this.Status = (string) comboBox1.SelectedItem;
+            Risk exists = this.Risks.Find(r => r.GetName() == textBox1.Text);
+            if (exists != null)
+            {
+                if(!exists.GetStatus().Equals(this.Status))
+                {
+                    label3.Text = "";
+                    button1.Enabled = true;
+                    return;
+                }
+                label3.Text = "Already Exists";
+                button1.Enabled = false;
+                return;
+            }
+            label3.Text = "";
+            button1.Enabled = true;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

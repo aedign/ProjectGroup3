@@ -36,15 +36,17 @@
             // 
             // textName
             // 
-            this.textName.Location = new System.Drawing.Point(12, 38);
+            this.textName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textName.Location = new System.Drawing.Point(12, 41);
             this.textName.Name = "textName";
-            this.textName.Size = new System.Drawing.Size(419, 20);
+            this.textName.Size = new System.Drawing.Size(419, 22);
             this.textName.TabIndex = 0;
             this.textName.TextChanged += new System.EventHandler(this.textName_TextChanged);
             // 
             // Save
             // 
             this.Save.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Save.Location = new System.Drawing.Point(356, 87);
             this.Save.Name = "Save";
             this.Save.Size = new System.Drawing.Size(75, 23);
@@ -56,19 +58,21 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.Size = new System.Drawing.Size(71, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Edit Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(88, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.Size = new System.Drawing.Size(0, 16);
             this.label2.TabIndex = 3;
             // 
             // EditProject

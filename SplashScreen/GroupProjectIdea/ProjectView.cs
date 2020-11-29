@@ -56,7 +56,7 @@ namespace GroupProjectIdea
 
             foreach (Risk r in p.GetRisks())
             {
-                listBoxRisk.Items.Add(r.GetName() + "   - Status: " + r.GetStatus());
+                listBoxRisk.Items.Add(r.GetName() + "   -   Status: " + r.GetStatus());
             }
 
         }
@@ -286,7 +286,7 @@ namespace GroupProjectIdea
             if (exists == null)
             {
                 p.AddRisk(newRisk);
-                listBoxRisk.Items.Add(newRisk.GetName() + "   ---   Status: " + newRisk.GetStatus());
+                listBoxRisk.Items.Add(newRisk.GetName() + "   -   Status: " + newRisk.GetStatus());
                 label12.Text = "";
                 textBox4.Text = "";
                 comboBox1.SelectedItem = null;
@@ -317,7 +317,7 @@ namespace GroupProjectIdea
 
             DialogResult result = editRisk.ShowDialog();
 
-            listBoxRisk.Items.Remove(current.GetName() + "   ---   Status: " + current.GetStatus());
+            listBoxRisk.Items.Remove(current.GetName() + "   -   Status: " + current.GetStatus());
 
             if (result == DialogResult.OK)
             {
@@ -326,7 +326,7 @@ namespace GroupProjectIdea
             }
 
            
-            listBoxRisk.Items.Add(current.GetName() + "   ---   Status: " + current.GetStatus());
+            listBoxRisk.Items.Add(current.GetName() + "   -   Status: " + current.GetStatus());
 
         }
 
@@ -346,7 +346,7 @@ namespace GroupProjectIdea
 
             Risk current = this.p.GetRisks().Find(r => r.GetName().Equals(name));
 
-            listBoxRisk.Items.Remove(current.GetName() + "   ---   Status: " + current.GetStatus());
+            listBoxRisk.Items.Remove(current.GetName() + "   -   Status: " + current.GetStatus());
             p.RemoveRisk(current);
             label12.Text = "";
 
@@ -358,6 +358,11 @@ namespace GroupProjectIdea
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
