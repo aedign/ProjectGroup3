@@ -127,3 +127,4 @@ C:\Users\one-s\Desktop\TheProject3\ProjectGroup3\SplashScreen\GroupProjectIdea\o
 C:\Users\one-s\Desktop\TheProject3\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.csproj.CopyComplete
 C:\Users\one-s\Desktop\TheProject3\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.exe
 C:\Users\one-s\Desktop\TheProject3\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.pdb
+C:\Users\one-s\Desktop\TheProject3\ProjectGroup3\SplashScreen\GroupProjectIdea\obj\Debug\GroupProjectIdea.csprojAssemblyReference.cache

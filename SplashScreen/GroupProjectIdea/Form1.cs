@@ -23,17 +23,23 @@ namespace GroupProjectIdea
         private void button2_Click(object sender, EventArgs e)
         {
             if (textProject.Text.Equals("")){
+                label3.Text = "Enter a Project name";
                 return;
             }
-            
+
+            label3.Text = "";
             string name = textProject.Text;
             Project project = new Project(name);
             Project exists = this.Projects.Find(p => p.Name == project.Name);
             if(exists == null){
                 this.Projects.Add(project);
                 listProjects.Items.Add(project);
+                label3.Text = "";
+                textProject.Text = "";
+                return;
             }
-            
+            label3.Text = "Project already exists";
+
         }
 
         private void listProjects_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -63,10 +69,11 @@ namespace GroupProjectIdea
         {
             Project p = (Project)listProjects.SelectedItem;
             if (p != null){
+                label3.Text = "";
                 ProjectView view = new ProjectView(p);
                 view.ShowDialog();
             }
-           
+            label3.Text = "Select a Project to view";
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -92,12 +99,20 @@ namespace GroupProjectIdea
 
         private void button3_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Do You Want To Delete Your Project", "Remove Project", MessageBoxButtons.YesNoCancel);
+            Project p = (Project) listProjects.SelectedItem;
+            if(p == null)
+            {
+                label3.Text = "Select a Project to remove";
+                return;
+            }
+
+            DialogResult dialogResult = MessageBox.Show("Would you like to delete \"" + p.GetName() + "\"?", "Remove Project", MessageBoxButtons.YesNoCancel);
             if (dialogResult == DialogResult.Yes)
             {
                 Project toDelete = (Project)listProjects.SelectedItem;
                 Projects.Remove(toDelete);
                 listProjects.Items.Remove(toDelete);
+                label3.Text = "";
             }
         }
     }

@@ -29,9 +29,9 @@ namespace GroupProjectIdea
                 richTextBox1.Text = p.GetDescription();
             }
             
-            if (p.Manager == null || p.Manager.Equals(""))
+            if (p.Manager == null)
             {
-                label6.Text = "(Set Manager)";
+                label6.Text = "";
             }
             else
             {
@@ -71,9 +71,11 @@ namespace GroupProjectIdea
         {
             if (textBoxMembers.Text.Equals(""))
             {
+                label15.Text = "Can't add empty field";
                 return;
             }
 
+            label15.Text = "";
             string name = textBoxMembers.Text;
             Member member = new Member(name);
             Member exists = this.p.GetMembers().Find(m => m.Name == member.Name);
@@ -81,7 +83,11 @@ namespace GroupProjectIdea
             {
                 p.AddMember(member);
                 listMembers.Items.Add(member);
+                label15.Text = "";
+                textBoxMembers.Text = "";
+                return;
             }
+            label15.Text = "Already exists";
         }
 
         private void listMembers_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -110,8 +116,10 @@ namespace GroupProjectIdea
         {
             if (textBoxFunctionalities.Text.Equals(""))
             {
+                label16.Text = "Can't add empty field";
                 return;
             }
+            label16.Text = "";
             string FunctionalRequirement = textBoxFunctionalities.Text;
 
             List<string> fr = this.p.GetFunctionalRequirements();
@@ -120,7 +128,11 @@ namespace GroupProjectIdea
             {
                 p.AddFunctionalRequirement(FunctionalRequirement);
                 listFunctionalities.Items.Add(FunctionalRequirement);
+                label16.Text = "";
+                textBoxFunctionalities.Text = "";
+                return;
             }
+            label16.Text = "Already exists";
         }
         private void listFunctionalities_MouseDoubleClick(object sender, MouseEventArgs e)
         {
@@ -166,15 +178,27 @@ namespace GroupProjectIdea
         private void button2_Click(object sender, EventArgs e)
         {
             Member selectedMember = (Member)listMembers.SelectedItem;
+            if(selectedMember == null)
+            {
+                label15.Text = "Select a member";
+                return;
+            }
             listMembers.Items.Remove(selectedMember);
             p.RemoveMember(selectedMember);
+            label15.Text = "";
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             string fr = (string)listFunctionalities.SelectedItem;
+            if(fr == null)
+            {
+                label16.Text = "Select a requirement";
+                return;
+            }
             listFunctionalities.Items.Remove(fr);
             p.RemoveFunctionalRequirement(fr);
+            label16.Text = "";
         }
 
         //non-functional requirements VVV
@@ -204,8 +228,11 @@ namespace GroupProjectIdea
         {
             if (textBox3.Text.Equals(""))
             {
+                label17.Text = "Can't add empty field";
                 return;
             }
+
+            label17.Text = "";
             string NonFunctionalRequirement = textBox3.Text;
 
             List<string> nfr = this.p.GetNonFunctionalRequirements();
@@ -214,24 +241,42 @@ namespace GroupProjectIdea
             {
                 p.AddNonFunctionalRequirement(NonFunctionalRequirement);
                 listBox3.Items.Add(NonFunctionalRequirement);
+                label17.Text = "";
+                textBox3.Text = "";
+                return;
             }
+            label17.Text = "Already exists";
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             string nfr = (string) listBox3.SelectedItem;
+            if(nfr == null)
+            {
+                label17.Text = "Select a requirement";
+                return;
+            }
             listBox3.Items.Remove(nfr);
             p.RemoveNonFunctionalRequirement(nfr);
+            label17.Text = "";
         }
 
         private void buttonAdd4_Click(object sender, EventArgs e)
         {
-
+            label12.Text = "";
+            label14.Text = "";
             if (textBox4.Text.Equals(""))
             {
+                label12.Text = "Enter a Risk name";
+                return;
+            }
+            if (comboBox1.SelectedItem == null)
+            {
+                label14.Text = "Select a Risk Status";
                 return;
             }
 
+           
             string riskName = (string) textBox4.Text;
             string riskStatus = (string)comboBox1.Text;
             Risk newRisk = new Risk(riskName, riskStatus);
@@ -241,8 +286,13 @@ namespace GroupProjectIdea
             if (exists == null)
             {
                 p.AddRisk(newRisk);
-                listBoxRisk.Items.Add(newRisk.GetName() + "   - Status: " + newRisk.GetStatus());
+                listBoxRisk.Items.Add(newRisk.GetName() + "   ---   Status: " + newRisk.GetStatus());
+                label12.Text = "";
+                textBox4.Text = "";
+                comboBox1.SelectedItem = null;
+                return;
             }
+            label12.Text = "Already exists";
 
         }
 
@@ -252,6 +302,7 @@ namespace GroupProjectIdea
             {
                 return;
             }
+
             string RiskString = (string) listBoxRisk.SelectedItem;
             string name = "";
             string[] array = RiskString.Split('-');
@@ -260,12 +311,13 @@ namespace GroupProjectIdea
             Risk current = this.p.GetRisks().Find(r => r.GetName().Equals(name));
 
             FormRisk editRisk = new FormRisk(this.p.GetRisks());
+            editRisk.risk = current;
             editRisk.Name = current.GetName();
             editRisk.Status = current.GetStatus();
 
             DialogResult result = editRisk.ShowDialog();
 
-            listBoxRisk.Items.Remove(current.GetName() + "   - Status: " + current.GetStatus());
+            listBoxRisk.Items.Remove(current.GetName() + "   ---   Status: " + current.GetStatus());
 
             if (result == DialogResult.OK)
             {
@@ -274,22 +326,40 @@ namespace GroupProjectIdea
             }
 
            
-            listBoxRisk.Items.Add(current.GetName() + "   - Status: " + current.GetStatus());
+            listBoxRisk.Items.Add(current.GetName() + "   ---   Status: " + current.GetStatus());
 
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             string RiskString = (string)listBoxRisk.SelectedItem;
+
+            if (RiskString == null)
+            {
+                label12.Text = "Select a risk";
+                return;
+            }
+
             string name = "";
             string[] array = RiskString.Split('-');
             name = array[0].Trim();
 
             Risk current = this.p.GetRisks().Find(r => r.GetName().Equals(name));
 
-            listBoxRisk.Items.Remove(current.GetName() + "   - Status: " + current.GetStatus());
+            listBoxRisk.Items.Remove(current.GetName() + "   ---   Status: " + current.GetStatus());
             p.RemoveRisk(current);
-            
+            label12.Text = "";
+
+        }
+
+        private void ProjectView_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

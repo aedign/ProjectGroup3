@@ -57,10 +57,7 @@ namespace GroupProjectIdea
 
         private void Save_Click(object sender, EventArgs e)
         {
-            if (textName.Text.Equals("")){
-                return;
-            }
-            if(this.Projects != null)
+            if (this.Projects != null)
             {
                 Project exists = this.Projects.Find(p => p.Name == textName.Text);
                 if(exists == null){
@@ -85,8 +82,68 @@ namespace GroupProjectIdea
                     return;
                 }
             }
-
+            if (this.NonFunctionalRequirements != null)
+            {
+                string exists = this.NonFunctionalRequirements.Find(nfr => nfr == textName.Text);
+                if (exists == null)
+                {
+                    Name = textName.Text;
+                    return;
+                }
+            }
             Name = textName.Text;
+        }
+
+        private void textName_TextChanged(object sender, EventArgs e)
+        {
+            if (textName.Text.Equals(""))
+            {
+                label2.Text = "Can't be empty";
+                Save.Enabled = false;
+                return;
+            }
+            if (this.Projects != null)
+            {
+                Project exists = this.Projects.Find(p => p.Name == textName.Text);
+                if (exists != null)
+                {
+                    label2.Text = "Already exists";
+                    Save.Enabled = false;
+                    return;
+                }
+            }
+            if (this.Members != null)
+            {
+                Member exists = this.Members.Find(m => m.Name == textName.Text);
+                if (exists != null)
+                {
+                    label2.Text = "Already exists";
+                    Save.Enabled = false;
+                    return;
+                }
+            }
+            if (this.FunctionalRequirements != null)
+            {
+                string exists = this.FunctionalRequirements.Find(fr => fr == textName.Text);
+                if (exists != null)
+                {
+                    label2.Text = "Already exists";
+                    Save.Enabled = false;
+                    return;
+                }
+            }
+            if (this.NonFunctionalRequirements != null)
+            {
+                string exists = this.NonFunctionalRequirements.Find(nfr => nfr == textName.Text);
+                if (exists != null)
+                {
+                    label2.Text = "Already exists";
+                    Save.Enabled = false;
+                    return;
+                }
+            }
+            label2.Text = "";
+            Save.Enabled = true;
         }
     }
 }

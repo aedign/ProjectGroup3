@@ -31,6 +31,7 @@
             this.textName = new System.Windows.Forms.TextBox();
             this.Save = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textName
@@ -39,6 +40,7 @@
             this.textName.Name = "textName";
             this.textName.Size = new System.Drawing.Size(419, 20);
             this.textName.TabIndex = 0;
+            this.textName.TextChanged += new System.EventHandler(this.textName_TextChanged);
             // 
             // Save
             // 
@@ -60,11 +62,21 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Edit Name";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(88, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.TabIndex = 3;
+            // 
             // EditProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(448, 153);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Save);
             this.Controls.Add(this.textName);
@@ -81,5 +93,6 @@
         private System.Windows.Forms.TextBox textName;
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
